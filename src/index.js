@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+// import App from './App';
+import * as serviceWorker from "./serviceWorker";
+import CustomAccordion from "./components/CustomAccordion/CustomAccordion";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CustomAccordion />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
