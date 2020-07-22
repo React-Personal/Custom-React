@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Accordion, Icon } from "semantic-ui-react";
-import OrderInfo from "./OrderData";
-import ProductInfo from "./ProductInfo";
+import OrderInfo from "./OrderDetails";
+import ProductInfo from "./PrimaryDetails";
+import SupplierDetails from "./SupplierDetails";
+import ProductDetail from "./ProductDetail";
+import ShippingDetails from "./ShippingDetails";
 
 function CustomAccordion() {
   const [activeIndex, setactiveIndex] = useState(null);
@@ -23,7 +26,7 @@ function CustomAccordion() {
           index={0}
         >
           <Icon name="dropdown" />
-          Product Information
+          Primary Details
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 0}>
           <ProductInfo />
@@ -35,31 +38,31 @@ function CustomAccordion() {
           active={activeIndex === 1}
         >
           <Icon name="dropdown" />
-          Order Info
+          Supplier Details
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 1}>
-          <OrderInfo />
+          <SupplierDetails />
         </Accordion.Content>
 
         <Accordion.Title
           onClick={handleClick}
-          index={1}
+          index={2}
           active={activeIndex === 2}
         >
           <Icon name="dropdown" />
           Product Details
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 2}>
-          <OrderInfo />
+          <ProductDetail />
         </Accordion.Content>
 
         <Accordion.Title
           onClick={handleClick}
-          index={1}
+          index={3}
           active={activeIndex === 3}
         >
           <Icon name="dropdown" />
-          Shipping Details
+          Order Details
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 3}>
           <OrderInfo />
@@ -67,13 +70,14 @@ function CustomAccordion() {
 
         <Accordion.Title
           onClick={handleClick}
-          index={1}
+          index={4}
           active={activeIndex === 4}
         >
           <Icon name="dropdown" />
+          Shipping Details
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 4}>
-          <OrderInfo />
+          <ShippingDetails />
         </Accordion.Content>
       </Accordion>
     </div>
