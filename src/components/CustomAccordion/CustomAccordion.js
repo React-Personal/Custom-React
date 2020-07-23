@@ -7,14 +7,14 @@ import ProductDetail from "./ProductDetail";
 import ShippingDetails from "./ShippingDetails";
 
 function CustomAccordion() {
-  const [activeIndex, setactiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleClick = (e, tableProps) => {
     const { index } = tableProps;
 
     const newIndex = activeIndex === index ? -1 : index;
 
-    setactiveIndex(newIndex);
+    setActiveIndex(newIndex);
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Container } from "semantic-ui-react";
-import "./ProductInfo.scss";
+import "./PrimaryDetails.scss";
 
 function ProductInfo() {
   return (
